@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MediaRecorder API - Sample</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+  </head>
+
+
+
+  <body>
+<div class"wrapper" style="text-align:center">
+    <h1>Welcome to Interactive Audio Game</h1>
+    <audio id="story" src="/static/audio/story1.mp3" autoplay="true"></audio>
+    <audio id="song" src="/static/audio/song2.mp3" ></audio>
+
+
+    <button  class="btn btn-default" id='recButton'>Start</button>
+
+    {% if data %}
+    {{data | safe}}
+    {% endif %}
+
+    <button  class="btn btn-default" id='end'>End game</button>
+
+
+</div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/static/js/gameApp.js"></script>
+  </body>
+  <script>
+  $('#recButton').addClass("notRec");
+
+  $('#recButton').click(function(){
+	if($('#recButton').hasClass('notRec')){
+		$('#recButton').removeClass("notRec");
+		$('#recButton').addClass("Rec");
+	}
+	else{
+		$('#recButton').removeClass("Rec");
+		$('#recButton').addClass("notRec");
+	}
+});
+</script>
+</html>

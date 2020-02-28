@@ -1,0 +1,31 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+    <link rel=”stylesheet” href=”static/styles.css”>
+  </head>
+  <body>
+    <h1>This is the homepage</h1>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+
+Python button script
+</title>
+<link rel=”stylesheet” href=”static/styles.css”>
+</head>
+<body>
+<button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
+{% if data %}
+{{data | safe}}
+{% endif %}
+
+
+</body>
+</html>

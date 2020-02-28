@@ -1,0 +1,62 @@
+
+html{
+      background: currentColor
+      }
+li{
+  margin: 10px;
+}
+.wrapper{
+  text-align:center;
+}
+body{
+  color:crimson;
+  background-color: initial;
+}
+#btns{
+  display: block;
+  color:blue;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+h1{
+  margin: 100px;
+}
+
+
+button {
+	width: 100px;
+	height: 100px;
+	font-size: 0;
+  font-weight:800 !important;
+	background-color: red;
+	border: 0;
+	border-radius: 35px;
+	margin: 18px;
+	outline: none;
+  border-radius: 50% !important;
+}
+
+.notRec{
+	background-color: deepskyblue;
+  border-radius: 50% !important;
+}
+
+.Rec{
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+  border-radius: 50%;
+
+}
+
+@keyframes pulse{
+	0%{
+		box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+	}
+	65%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+	}
+	90%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+	}
+}
